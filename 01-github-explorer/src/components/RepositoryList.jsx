@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { RepositoryItem } from './RepositoryItem';
 import '../styles/repositories.scss';
 
-//https://api.github.com/users/viktorhugodev
+
 
 export function RepositoryList() {
 	const [repositories, setRepositories] = useState([]);
