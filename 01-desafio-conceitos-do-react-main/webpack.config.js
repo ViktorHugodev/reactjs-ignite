@@ -1,7 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const isDevelopment = process.env.NODE_ENV !== 'production'
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -12,14 +13,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions:['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   devServer: {
-    static: path.resolve(__dirname, 'public'),
+    contentBase: path.resolve(__dirname, 'public'),
     hot: true,
   },
   plugins: [
-    isDevelopment && new ReactRefreshWebpackPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin(),  
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
     })
@@ -27,7 +28,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx$/, 
+        test: /\.(j|t)sx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -36,13 +37,13 @@ module.exports = {
               isDevelopment && require.resolve('react-refresh/babel')
             ].filter(Boolean)
           }
-        },
+        }
       },
       {
-        test: /\.scss$/, 
+        test: /\.scss$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      }
-    ],
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+    ]
   }
 }
