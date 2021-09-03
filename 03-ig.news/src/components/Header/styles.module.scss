@@ -1,0 +1,48 @@
+.headerContainer {
+	height: 5rem;
+	border-bottom: 1px solid var(--grey-800);
+}
+
+.content {
+	max-width: 1120px;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+
+	nav {
+		margin-left: 5rem;
+		height: 5rem;
+
+		a {
+			display: inline-block;
+			position: relative;
+			padding: 0 0.5rem;
+			height: 5rem;
+			line-height: 5rem;
+			color: var(--gray-med);
+
+			transition: color 0.2s;
+
+			&:hover {
+				color: var(--title);
+			}
+
+			&.active {
+				color: (var--title);
+				font-weight: bold;
+			}
+
+			&.active::after {
+				content: '';
+				height: 3px;
+				width: 100%;
+				border-radius: 3px 3px 0 0;
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+				background-color: var(--yellow);
+			}
+		}
+	}
+}
