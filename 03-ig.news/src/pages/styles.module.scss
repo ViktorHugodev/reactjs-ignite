@@ -1,0 +1,43 @@
+.mainContent {
+	max-width: 1120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 2rem;
+	height: calc(100vh - 5rem);
+
+	.avatarImg {
+		transform: scale(0.75);
+	}
+
+	.info {
+		display: block;
+
+		span {
+			font-size: 1.5rem;
+			font-weight: normal;
+		}
+
+		h1 {
+			margin-top: 2.5rem;
+			font-size: 4.5rem;
+			font-weight: bold;
+			line-height: 4.5rem;
+		}
+		p {
+			margin-top: 1.5rem;
+			font-size: 1rem;
+			font-weight: normal;
+			line-height: 1.5rem;
+		}
+
+		strong {
+			color: var(--blue);
+
+			&:last-child {
+				font-weight: normal;
+			}
+		}
+	}
+}
