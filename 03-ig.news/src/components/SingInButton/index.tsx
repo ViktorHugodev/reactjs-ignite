@@ -5,7 +5,7 @@ import {signIn, signOut,useSession} from 'next-auth/client'
 
 export function SingInButton() {
   const [session ] = useSession()
-  console.log(session)
+
   
   return session ? (
     <button className={styles.gitButton}
