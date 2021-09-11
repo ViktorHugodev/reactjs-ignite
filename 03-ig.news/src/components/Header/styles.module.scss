@@ -25,11 +25,11 @@
 			transition: color 0.2s;
 
 			&:hover {
-				color: var(--title);
+				color: var(--titles);
 			}
 
 			&.active {
-				color: (var--title);
+				color: var(--titles);
 				font-weight: bold;
 			}
 
