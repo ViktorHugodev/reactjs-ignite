@@ -1,0 +1,90 @@
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	.posts {
+		align-items: center;
+		max-width: 720px;
+		margin: 5rem auto;
+
+		justify-content: center;
+		img {
+			display: grid;
+			max-width: 680px;
+			border-radius: 20px;
+			justify-self: end;
+		}
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 1.5rem;
+			font-weight: 900;
+		}
+		h2,
+		h3,
+		h4 {
+			font-weight: 700;
+			font-size: 2.2rem;
+		}
+
+		time {
+			display: block;
+			font-size: 0.8rem;
+			color: var(--gray-med);
+			margin-bottom: 1.5rem;
+		}
+
+		p,
+		ul {
+			line-height: 1.5;
+			font-size: 0.8rem;
+			font-weight: normal;
+			color: var(--titles);
+			margin: 1.5rem 0;
+		}
+		ul {
+			padding-left: 1.5rem;
+			li {
+				margin: 0.5rem 0;
+			}
+		}
+
+		strong {
+			font-weight: bold;
+		}
+	}
+}
+.contentPreview {
+	background: linear-gradient(var(--titles), transparent);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.subscribeButton {
+	margin: 0 auto;
+	margin-top: 4rem;
+	display: flex;
+	height: 4rem;
+	border-radius: 60px;
+	width: 80%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	font-size: 1.1rem;
+
+	background: var(--shape);
+
+	.text1 {
+		color: white;
+		margin-right: 0.25rem;
+	}
+	.text2 {
+		font-weight: bold;
+		color: var(--yellow);
+	}
+	transform: filter 0.2s;
+	&:hover {
+		filter: brightness(0.8);
+	}
+}
