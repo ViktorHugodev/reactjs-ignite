@@ -1,5 +1,5 @@
 import {Flex, SimpleGrid, Box, Text } from '@chakra-ui/react'
-import { Header } from "../Components/Header";
+import { Header } from "../Components/Header/index";
 import dynamic from 'next/dynamic';
 import { Sidebar } from '../Components/Sidebar';
 import { theme } from '../styles/theme'
@@ -68,14 +68,14 @@ export default function Dashboard(){
   return (
     <Flex direction="column" h="100vh">
       <Header/>
-      
+
       <Flex w="100%" maxWidth={1480} my="6" mx="auto" px="6">
         <Sidebar/>
         
         <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start" >
           
           <Box bg="gray.800"
-          p="8"
+          p={["6","8"]}
           pb="4"
           borderRadius={8}>
             <Text fontSize="lg" mb="4">Inscritos da semana</Text>
@@ -83,7 +83,7 @@ export default function Dashboard(){
           </Box>
           
           <Box bg="gray.800"
-          p="8"
+          p={["6","8"]}
           pb="4"
           borderRadius={8}>
             <Text fontSize="lg" mb="4">Taxa de abertura</Text>
