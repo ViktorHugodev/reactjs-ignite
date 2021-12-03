@@ -1,0 +1,26 @@
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	background: whitesmoke;
+}
+.form {
+	flex-direction: column;
+	display: flex;
+	background: #fff;
+	padding: 30px;
+
+	button {
+		background: blue;
+		color: white;
+		border: none;
+		padding: 5px;
+		margin-top: 10px;
+		cursor: pointer;
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+}
